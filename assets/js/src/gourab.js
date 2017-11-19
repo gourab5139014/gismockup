@@ -12,7 +12,8 @@ window.onload = function () { // wait for load in a dumb way because B-0
         // window.confirm("Please confirm my purpose")
         // console.log($.trim(text_email));
         if($('#inputEmail').val() == DEMO_USERNAME && $('#inputPassword').val() == DEMO_PASSWORD){
-            window.alert("Login Success!");
+            // window.alert("Login Success!");
+            window.location.replace('dashboard.html');
         }
         // window.location.href = 'Students.html';
     })

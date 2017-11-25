@@ -1,5 +1,7 @@
 DEMO_USERNAME = "gourabmi@buffalo.edu";
 DEMO_PASSWORD = "gourabmi";
+DEMO_MOD_USERNAME = "moderator@buffalo.edu";
+DEMO_MOD_PASSWORD = "moderator";
 
 window.onload = function () { // wait for load in a dumb way because B-0
     'use strict';
@@ -14,6 +16,9 @@ window.onload = function () { // wait for load in a dumb way because B-0
         if($('#inputEmail').val() == DEMO_USERNAME && $('#inputPassword').val() == DEMO_PASSWORD){
             // window.alert("Login Success!");
             window.location.replace('dashboard.html');
+        } else if($('#inputEmail').val() == DEMO_MOD_USERNAME && $('#inputPassword').val() == DEMO_MOD_PASSWORD){
+            // window.alert("Login Success!");
+            window.location.replace('moderator_dashboard.html');
         }
         // window.location.href = 'Students.html';
     })

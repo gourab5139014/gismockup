@@ -1,5 +1,5 @@
-DEMO_USERNAME = "";
-DEMO_PASSWORD = "";
+DEMO_USERNAME = "hci@hci.com";
+DEMO_PASSWORD = "hci";
 DEMO_MOD_USERNAME = "moderator@buffalo.edu";
 DEMO_MOD_PASSWORD = "moderator";
 

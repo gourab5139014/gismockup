@@ -119,78 +119,109 @@
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h1 class="page-header">Dashboard</h1>
         <div class="row placeholder">
+
           <div class="input-group">
-            <input class="form-control" type="text" id="myInput"  placeholder="Search for Datasets..">
             <span class="input-group-btn">
-              <button class="btn btn-default" type="submit">
+              <div class="dropdown dropdown-lg">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <span class="caret"></span>
+                </button>
+                <div class="dropdown-menu dropdown-menu-left" role="menu">
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <label for="filter">Filter by</label>
+                        <select class="form-control">
+                            <option value="0" selected>All Snippets</option>
+                            <option value="1">Featured</option>
+                            <option value="2">Most popular</option>
+                            <option value="3">Top rated</option>
+                            <option value="4">Most commented</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="contain">Author</label>
+                        <input class="form-control" type="text" />
+                      </div>
+                      <div class="form-group">
+                        <label for="contain">Contains the words</label>
+                        <input class="form-control" type="text" />
+                      </div>
+                      <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    </form>
+                </div>
+              </div>
+            </span>
+            <input class="form-control" type="text" id="myInput" placeholder="Search for Datasets..">
+            <!-- <span class="input-group-btn"> -->
+            <span class="input-group-btn">
+              <button class="btn btn-primary" type="submit">
                 <i class="glyphicon glyphicon-search"></i>
-                <!-- Search -->
               </button>
             </span>
           </div>
         </div>
         <div class="row placeholders">
           <div class="table-responsive">
-          <table id="myTable" class="table table-striped">
-            <tr class="header">
-              <th style="width:30%;">File Name</th>
-              <th style="width:25%;">Verification Progress</th>
-              <th style="width:25%;">Date Modified</th>
-              <th style="width:20%;">Records</th>
-            </tr>
-            <tr>
-              <td>Shootings_BUF1</td>
-              <td>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                    style="width:10%">
-                    10%
+            <table id="myTable" class="table table-striped">
+              <tr class="header">
+                <th style="width:30%;">File Name</th>
+                <th style="width:25%;">Verification Progress</th>
+                <th style="width:25%;">Date Modified</th>
+                <th style="width:20%;">Records</th>
+              </tr>
+              <tr>
+                <td>Shootings_BUF1</td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                      style="width:10%">
+                      10%
+                    </div>
                   </div>
-                </div>
-              </td>
-              <td>Dec 2, 2015 11:44:20 PM</td>
-              <td>999</td>
-            </tr>
-            <tr>
-              <td>Buffalo_NY_2</td>
-              <td>
+                </td>
+                <td>Dec 2, 2015 11:44:20 PM</td>
+                <td>999</td>
+              </tr>
+              <tr>
+                <td>Buffalo_NY_2</td>
+                <td>
                   <div class="progress">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                        style="width:90%">
-                        90%
-                      </div>
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                      style="width:90%">
+                      90%
                     </div>
-              </td>
-              <td>Mar 21, 2017 09:30:20 AM</td>
-              <td>65536</td>
-            </tr>
-            <tr>
-              <td>Amherst_Buffalo_NY</td>
-              <td>
+                  </div>
+                </td>
+                <td>Mar 21, 2017 09:30:20 AM</td>
+                <td>65536</td>
+              </tr>
+              <tr>
+                <td>Amherst_Buffalo_NY</td>
+                <td>
                   <div class="progress">
-                      <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                        style="width:50%">
-                        40%
-                      </div>
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                      style="width:50%">
+                      40%
                     </div>
-              </td>
-              <td>Oct 2, 2017 01:22:25 AM</td>
-              <td>251</td>
-            </tr>
-            <tr>
-              <td>Shootings_BUF2</td>
-              <td>
+                  </div>
+                </td>
+                <td>Oct 2, 2017 01:22:25 AM</td>
+                <td>251</td>
+              </tr>
+              <tr>
+                <td>Shootings_BUF2</td>
+                <td>
                   <div class="progress">
-                      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                        style="width:70%">
-                        80%
-                      </div>
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
+                      style="width:70%">
+                      80%
                     </div>
-              </td>
-              <td>Dec 12, 2016 10:10:20 PM</td>
-              <td>127</td>
-            </tr>
-          </table>
+                  </div>
+                </td>
+                <td>Dec 12, 2016 10:10:20 PM</td>
+                <td>127</td>
+              </tr>
+            </table>
           </div>
           <!-- <ul id="myUL">
               <li><a href="#">Adele</a></li>
@@ -233,7 +264,7 @@
 
         <!-- <h2 class="sub-header">Section title</h2> -->
         <!-- <div class="table-responsive"> -->
-          <!-- <table class="table table-striped">
+        <!-- <table class="table table-striped">
             <thead>
               <tr>
                 <th>#</th>
